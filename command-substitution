@@ -1,0 +1,55 @@
+
+Command substituition:
+
+ie if we want to store or assign output of any linux command to a variable instead of a file.
+
+ie instead of uptime >> upt.txt
+
+i need to assign the out put to variable
+
+so ,
+  upt=`uptime`  -- here its single inverted comma ..NOT single quotes
+  now do a echo cmd to give output of variable upt
+
+  echo -e "${upt}"  this will give output of upt variable.
+
+  or we can use this method
+
+  mydate=$(date)
+  echo "${mydate}"  this cmd also can be used to store output of cmd to a variable instead of file
+
+
+  Next is exit command usage:
+
+  #!/bin/bash
+  echo "This is first line of the script"
+  exit
+  echo " This is the last line of the script"
+  :wq!
+  here , when we execute the script. only 1st echo cmd will get executed. since exit is given , code after exit will be ignored by shell script and it will exit out the bash shell
+
+real time use case;
+check service status , if service is running then dont start the service again
+
+once exit cmd is executed
+do echo $?
+o -- this means exit completed successfully
+
+but if you give
+exit 2
+
+echo$?
+2-- value 2 is prointed.. change the exit status code of shell script.
+
+We can get output of a command in 3 ways inside a shell script like below.
+[mrahul27@localhost ~]$ cat date.sh
+#!/bin/bash
+date
+
+echo "`date`"
+
+mydate=`date`
+echo "${mydate}"
+
+:wq!
+
