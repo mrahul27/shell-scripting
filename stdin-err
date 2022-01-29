@@ -1,0 +1,28 @@
+
+how to capture output of a command if its success or error/failure and store the result?
+
+example:if ls comamnd
+
+ls 1>out.txt 2>error.txt
+
+here 
+
+STD codes:
+0--stdin standard input
+1-- stdout standard output which will be displayed in terminal
+2--stderr standard error 
+so if execute a cmd lsd 1>out.txt 2>error.txt  since there is no cmd called lsd , it will throw error and capture the error to error.txt
+
+Another way to store output(both valid o/p or error ,anything):
+
+using wrong cmd for illustration,like:
+
+instead of ls ,use dsls
+dsls 1>out.txt 2>&1
+
+it means if valid output is fetched, that is 1, then store the value to out.txt
+If its not a valid o/p, instead an error, store the error in same file as out.txt
+
+so , dsls 1>out.xt 2>&1  --& is a pointer to 1, where 1 is pointing to out.txt  
+
+both in single file.
