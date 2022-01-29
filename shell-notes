@@ -1,0 +1,21 @@
+
+How to make a Linux shell script to run as normal linux command?
+
+1. Create a shell script with execute permission
+2. Create your own bin directory for ease of use. since all executable files will be under /bin directory
+3. for ex:
+ vi sample.sh
+ #!/bin/bash
+ uptime
+ uname -r
+ java -version
+ :wq!
+ chmod +x sample.sh
+ echo $PATH
+ 
+ Put the sample.sh under a directory like /myscripts/bin/ and add the path to system PATH variable
+ PATH=$PATH:/myscripts/bin
+
+ now instead of executing it as ./sample.sh, Just enter the command as sample.sh and hit enter
+
+
