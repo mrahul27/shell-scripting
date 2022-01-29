@@ -1,0 +1,71 @@
+
+To print a variable in shell scripting, echo cmd can be used
+ex:
+
+x=10
+echo "${x}"
+
+we can assign anything like
+
+x= 10
+y= 4.5
+z="Rahul"
+By default shell scripting, default variable is string
+
+we can assign variables in cmd line or inside a sh script.
+lets say assign x=20
+after using it for 10 lines of code, if we dont need to have value of x=20, we can unset
+
+ex: x=20
+echo "${x}"
+unset x
+
+now if we execute echo "${x}" , it will just empty line since its unset
+
+if we want to make a varialble value as constant throughout the script.we can use readonly cmd
+
+x=25
+readonly x
+or 
+
+readonly x = 25
+
+next time if we you try to assign diff, value to x. it will throw error.
+
+we can export value of a variable assigned in cmd line to script directly with export cmd instead of assigning inside script
+in cmd line:  z=33; export z
+
+in script , just make use of z. it will take value as 33
+export -p --> it will print all exported values (system variables)
+to check environmen variable  use env or print env
+Variables:
+user defined variables -- like x=10, system_name= mycomputer
+system variables  SHELL
+special system variables $?, \n-- next line, 
+\t -- tab, 
+\r --carriage return--it will put the cursor to first line from \r and override
+This is\r my laptop
+
+if we have to give interactive cmds. like input needs to be given by user ,we can use read cmd like below
+
+read y
+echo "Value of y is : ${y}"
+or
+
+read -p "Enter value of y: " y
+echo "The value of y is :${y}"
+
+How to comment out multiple lines in 1 shot:
+<< mycomments
+echo :Hi this is shell scripting class
+echo "this files are related to variables and data types
+echo "ENd of echo comments to demonstrate multi line comment out.
+mycomments
+
+Special characters:
+\n-- next line
+\t--tab
+\r== carriage return
+
+
+
