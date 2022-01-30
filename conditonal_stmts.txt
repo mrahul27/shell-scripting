@@ -1,0 +1,43 @@
+Jan 30 th 2022 Chennai-- Shell scripting learning
+
+Conditional statement:
+==  used to decide if a condition is true or not
+
+ex:
+if [expression==true]
+then
+      echo statemnt 1
+      echo statement 2
+
+fi
+
+here if the expression is true, then only lines(codes) between then and fi will be executed.
+
+How to create exrepssions:
+FOr numbers:
+     x=5
+     y=10
+     now to compare, these 2 numbers, we can use  RELATIONAL operators:
+     -eq ---equal to
+     -ne --- not equal to
+     -gt  ---greater than
+     -lt -- less than
+     -ge== greater than or equal to
+     -le== less than or equal to
+
+For strings:
+
+x=active
+y=inactive
+
+we need to use 
+==
+!=
+-n --non zero
+-z ---zero
+
+Best practice while assgining value to a variable , put it in double quotes. since string needs to be put inside double quotes
+
+ex x=10 is correct , but practice using x="10"
+but for string x=date is wrong, it should be x="date" so better practice "" 
+
