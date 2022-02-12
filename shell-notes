@@ -18,4 +18,15 @@ How to make a Linux shell script to run as normal linux command?
 
  now instead of executing it as ./sample.sh, Just enter the command as sample.sh and hit enter
 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+Feb 12 th 2022: Saturday: Chennai:
+
+To control our loop statements, we have 2 keywords to use:
+*********************************************************
+1. exit----If we give exit stmt/command in any line of the script,then script will get terminated aftr exit stmt. remaining line of code will not be executed.scipt terminates.
+
+2. break  --> This will only break the loop stmt and come out of loop condition, but remaining code inside script will get executed
+
+3. continue
